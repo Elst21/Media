@@ -1,1 +1,63 @@
+* {
+    box-sizing: border-box; /* Предотвращает переполнение элементов */
+}
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color:pink 
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: rgb(67, 21, 232); /* Цвет заголовка */
+}
+
+.container {
+    display: flex; /* Включаем Flexbox */
+    flex-wrap: wrap; /* Обрезаем элементы, чтобы переносились на новую строку */
+    justify-content: center; /* Центрируем по горизонтали */
+    gap: 15px; /* Отступ между элементами */
+}
+
+.card {
+    background-color: #a4d0df; /* Цвет фона для каждого элемента */
+    border: 1px solid #ddd; /* Рамка для элементов */
+    border-radius: 10px; /* Скругление углов рамки */
+    overflow: hidden; /* Обрезать содержимое */
+    width: 200px; /* Ширина элемента */
+    text-align: center; /* Центрирование текста */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для элемента */
+    transition: transform 0.2s; /* Плавный переход для трансформации */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Увеличение элемента при наведении */
+}
+
+.card img {
+    width: 100%; /* Ширина изображения растягивается на 100% ширины элемента */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+@media (max-width: 768px) {
+    .card {
+      flex: 1 1 100%; /* Для мобильных карточки в один столбик */
+    }
+  }
+  @media (max-width: 768px) {
+    .menu {
+      display: none; /* Скрыть меню на мобильных */
+    }
+  
+    .menu-toggle {
+      display: block; /* Показать иконку гамбургера */
+    }
+    .card {
+        transition: all 0.3s ease;
+      }
+  }
